@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="shortcut icon" type="image/png" href="shcursor.png"/>
+  <meta charset="UTF-8">
+  <title>Silent hill</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+
+/* full page style */
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Pangolin&family=Walter+Turncoat&display=swap');
+
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
+  body {
+    font-size: 14px;
+    font-family: 'Walter Turncoat', cursive;
+    color: #000;
+    background-color: #662619;
+    background-image:url('scarybg.png');
+    background-repeat: repeat; 
+    background-attachment: fixed;
+    line-height:1.5;
+    letter-spacing:0px;
+    word-spacing:5px;
+    cursor: url(shcursor.png), auto;
+    }
+
+
+.vignette {
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  box-shadow:inset 0 0 700px rgba(0,0,0,0.8);
+}
+
+  hr.magic {
+    height: 50px;
+    background: url('divider1.png') no-repeat center;
+    border: 0;
+    }  
+  
+  hr.candy {
+    height: 50px;
+    background: url('divider2.png') no-repeat center;
+    border: 0;
+    }  
+  
+  hr.scary {
+    height: 50px;
+    background: url('divider3.png') no-repeat center;
+    border: 0;
+    }  
+  
+  hr.quill {
+    height: 50px;
+    background: url('divider4.png') no-repeat center;
+    border: 0;
+    }  
+
+  a:link, a:active, a:visited {
+    color: #662619; 
+    text-decoration:none;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff, 0 0 3px rgba(0,0,0,0.5), 0 0 3px rgba(0,0,0,0.5), 0 0 3px rgba(0,0,0,0.5);
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+ 
+  a:hover {
+    color: #fff;
+    text-shadow: -1px 0 #662619, 0 1px #662619, 1px 0 #662619, 0 -1px #662619, 0 0 3px rgba(0,0,0,0.5), 0 0 3px rgba(0,0,0,0.5), 0 0 3px rgba(0,0,0,0.5);
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear; 
+    cursor: url(shcursor.png), auto;
+    }
+ 
+  b, strong {
+    color:#000;
+    font-weight:900;
+    }
+
+
+/* main containers */
+  
+  #contain {
+    text-align: center;
+    width: 557px;
+    border: 1px solid none;
+    background-color: none;
+    padding:-5px;
+    margin: auto;
+    margin-top:0px;
+    margin-bottom:0px;
+    position:relative;
+    z-index:5;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+    }
+  
+  #containext {
+    text-align: center;
+    width: 559px;
+    background-color: none;
+    padding: 0px;
+    margin: auto;
+    margin-top:112px;
+    overflow:visible;
+    }
+
+/* banner and title */
+
+  div.pic {
+    content: url('shtitle.png');
+    text-align: center;
+    background-color: none;
+    width: 535px;
+    height:190px;
+    margin: auto;
+    margin-bottom:-5px;
+    margin-top:5px;
+    border:none;
+    padding:5px;
+    z-index:3;
+    }
+  
+    div.lamps {
+    content: url('Lamps.png');
+    z-index:7;
+    text-align: center;
+    background-color: none;
+    width: 535px;
+    height:190px;
+    margin: auto;
+    margin-bottom:-205px;
+    margin-top:5px;
+    border:none;
+    padding:5px;
+    position:relative;
+    }
+
+    div.lightR {
+    content: url('beam2.png');
+    z-index:3;
+    text-align: center;
+    background-color: none;
+    width: 535px;
+    height:190px;
+    margin: auto;
+    margin-bottom:-205px;
+    margin-top:5px;
+    border:none;
+    padding:5px;
+    position:relative;
+      -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name:flickerR;
+    -moz-animation-name:flickerR;
+    }  
+  
+      div.lightL {
+    content: url('beam.png');
+    z-index:3;
+    text-align: center;
+    background-color: none;
+    width: 535px;
+    height:190px;
+    margin: auto;
+    margin-bottom:-205px;
+    margin-top:5px;
+    border:none;
+    padding:5px;
+    position:relative;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name:flickerL;
+    -moz-animation-name:flickerL;
+    } 
+
+@keyframes flickerL {
+	0%, 100%, 20%, 50%, 80% {
+opacity:0.4;
+	}
+	40% {
+opacity:0.3;
+	}
+	43% {
+	  opacity: 1;
+	}
+	46% {
+	  opacity 0;
+	}
+	47% {
+	  opacity: 0.7;
+	}
+	49% {
+	  opacity: 0.2
+	}
+	60% {
+opacity:0.7;
+	}
+	65% {
+	  opacity: 0;
+	}
+	68% {
+	  opacity:1;
+	}
+}
+
+@keyframes flickerR {
+  0%, 100%, 20%, 50%, 80% {
+opacity:0.4;
+	}
+	23 % {
+	  opacity: 0;
+	}
+	25% {
+	  opacity: 0.7;
+	}
+	26% {
+	  opacity: 1;
+	}
+	28% {
+	  opacity: 0.2;
+	}
+	54% {
+	  opacity: 0;
+	}
+	55% {
+	  opacity: 0.7;
+	}
+	58 {
+	  opacity: 0.1;
+	}
+}
+
+  #titlebar {
+    text-align: center;
+    color:#998248;
+    background-color: #353924 ;
+    width: 537px;
+    height:27px;
+    border: 4px double #B4BBA1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    font-size:16px;
+    transform: rotate(0.5deg);
+    box-shadow:inset 0 0 50px rgba(0,0,0,0.4);
+    }
+
+/* scrolls side navigation */
+
+  #scrollcontainer {
+    background-color:none;
+    width:400px;
+    height:406px;
+    position:relative;
+    text-align:left;
+    z-index:3;
+    margin-top:-510px;
+    margin-left:-125px;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+    }
+
+  #scroll1 {
+    background-color: #F3ECC7 ;
+    background-image:url('grungetile.png');
+    width: 300px;
+    height:100px;
+    line-height:100px;
+    border: 1px solid #B1AB88;
+    margin-bottom:50px;
+    margin-left:95px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+  
+  #scroll1:hover {
+    margin-left:-95px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+  
+  #scroll2 {
+    background-color: #F3ECC7 ;
+    background-image:url('grungetile.png');
+    width: 300px;
+    height:100px;
+    line-height:100px;
+    border: 1px solid #B1AB88;
+    margin-bottom:50px;
+    margin-left:110px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }  
+  
+  #scroll2:hover {
+    margin-left:-110px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+  
+  #scroll3 {
+    background-color: #F3ECC7 ;
+    background-image:url('grungetile.png');
+    width: 300px;
+    height:100px;
+    line-height:100px;
+    border: 1px solid #B1AB88;
+    margin-bottom:50px;
+    margin-left:100px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+  
+  #scroll3:hover {
+    margin-left:-100px;
+    -webkit-transition: all 0.2s linear; 
+    -moz-transition: all 0.2s linear; 
+    transition: all 0.2s linear;
+    }
+  
+  div.scrollimg {
+    content: url('scroll.png');
+    height:150px;
+    width:40px;
+    margin-top:-25px;
+    margin-left:-20px;
+    z-index:4;
+    float:left;
+    }
+  
+/* main content */
+  
+  #content {
+    font-weight:normal;
+    background-color:#F3ECC7;
+    background-image:url('grungetile.png');
+    color:#7B625E;
+    border:1px solid #B1AB88;
+    width:535px;
+    height:500px;
+    display:block;
+    margin:auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    overflow:auto;
+    padding:5px;
+      box-shadow:inset 0 0 50px rgba(0,0,0,0.4);
+    }
+  
+/* footer */
+
+  #footer {
+    margin-top:5px;
+    background-color: #353924 ;
+    width: 537px;
+    height:27px;
+    border: 4px double #B4BBA1;
+    color: #998248;
+    margin:auto;
+    margin-bottom:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform: rotate(-0.75deg);
+    box-shadow:inset 0 0 50px rgba(0,0,0,0.4);
+    } 
+
+
+/* webkit stuff */
+  
+  ::-webkit-scrollbar-thumb {
+    min-height: 60px;
+    border-left: 4px solid #F3ECC7;
+    border-right: 4px solid #F3ECC7;
+    border-top: 5px solid #F3ECC7;
+    border-bottom: 5px solid #F3ECC7;
+    background: #662619;
+    }
+ 
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 10px;
+    border-left: 5px solid #F3ECC7;
+    border-right: 5px solid #F3ECC7;
+    border-top: 5px solid #F3ECC7;
+    border-bottom: 5px solid #F3ECC7;
+    background: #B1AB88;
+    }
+    @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+  
+</style>
+</head>
+<body>
+
+<div class="vignette"></div>
+
+<div id="containext">
+
+<div id="contain">
+<div id="lamps"><div class="lamps"></div></div>
+<div id="lightR"><div class="lightR"></div></div>
+<div id="lightL"><div class="lightL"></div></div>
+<div id="pic"><div class="pic"></div></div>
+
+<div id="titlebar">
+Silent Hill Page
+ </div>
+ 
+   <div id="content">
+   <br>My last choice for a theme is something I chose just because I hold it dear. I love silent hill so much, I thought itd be really fun to try and recreate the erie feeling you get while playing the games!<br>
+    <br><hr class="scary">
+    <br>The cursor this time is a bit unique, and you could probably only tell what it was if youve played the games before. Its the radio that detects when monsters are near you! I thought itd be a fun additon.<br>
+    <br><hr class="scary">
+    <br>Thanks for viewing all of the pages! You can look back at some of the past ones, or "return to reality" by clicking the link in the footer. Thanks so much!
+  </div>
+ 
+  <div id="footer">
+  <a href="http://codedumptest.neocities.org">Back to Reality</a> 
+  </div>
+  </div>
+      <div id="scrollcontainer">
+<a href="magic.html">
+<div id="scroll1">
+<div id="scrollimg"><div class="scrollimg"></div></div>
+<!--First Link Text-->
+Magic Forest
+</div>
+</a>
+
+<a href="candyland.html">
+<div id="scroll2">
+<div id="scrollimg"><div class="scrollimg"></div></div>
+<!--Second Link Text-->
+Candyland
+</div>
+</a>
+
+<a href="silenthill.html">
+<div id="scroll3">
+<div id="scrollimg"><div class="scrollimg"></div></div>
+<!--Third Link Text-->
+Silent Hill
+</div>
+</a>
+
+</div>
+</div>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ●
+  </div>
+  <div class="snowflake">
+  ◦
+  </div>
+  <div class="snowflake">
+  ●
+  </div>
+  <div class="snowflake">
+  ◦
+  </div>
+  <div class="snowflake">
+  ●
+  </div>
+  <div class="snowflake">
+  ◦
+  </div>
+  <div class="snowflake">
+    ●
+  </div>
+  <div class="snowflake">
+    ◦
+  </div>
+  <div class="snowflake">
+    ●
+  </div>
+  <div class="snowflake">
+    ◦
+  </div>
+  <div class="snowflake">
+    ●
+  </div>
+  <div class="snowflake">
+    ◦
+  </div>
+</div>
+
+
+
+  </body>
+</html>
